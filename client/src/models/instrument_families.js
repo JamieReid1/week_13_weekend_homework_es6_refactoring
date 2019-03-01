@@ -11,7 +11,6 @@ class InstrumentFamilies {
     PubSub.publish('InstrumentFamilies:data-ready', this.data);
 
     PubSub.subscribe('SelectView:change', (evt) => {
-      console.log(evt.detail);
       const selectedIndex = evt.detail;
       this.publishFamilyDetail(selectedIndex);
     });
